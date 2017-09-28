@@ -1,0 +1,28 @@
+## Unix
+alias ll="ls -la"
+
+## Directory Location
+pp="/home/$USER/Projects/php/"
+flp="/home/$USER/Projects/php/fl"
+
+## Git
+alias gi='git init'
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add -A'
+alias gc='git commit -m'
+alias gpl='git pull origin master'
+alias gph='git push origin master'
+alias gl='git log'
+alias gst='git show-ref --tag'
+alias gtc='git rev-list -n 1 --abbrev-commit '
+
+## Composer
+alias c='composer'
+alias cr='c require'
+alias cdal='c dump-autoload'
+
+## Laravel
+alias lc='php artisan'
+alias lrl='lc route:list'
+alias lmg='lc migrate'
