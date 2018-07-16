@@ -1,5 +1,7 @@
 ## Unix
-alias ll="ls -la"
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 ## Directory Location
 pp="/home/$USER/Projects/php/"
@@ -11,14 +13,23 @@ alias gs='git status'
 alias ga='git add'
 alias gaa='git add -A'
 alias gc='git commit -m'
-alias gpl='git pull origin master'
-alias gph='git push origin master'
+alias gpl='git pull'
+alias gps='git push'
+alias gplm='gpl origin master'
+alias gpsm='gps origin master'
+alias gpld='gpl origin develop'
+alias gpsd='gps origin develop'
 alias gl='git log'
 alias gst='git show-ref --tag'
 alias gtc='git rev-list -n 1 --abbrev-commit '
+alias gpp='gpl && gps'
+alias gppm='gplm && gpsm'
+alias gppd='gpld && gpsd'
 
 ## Composer
 alias c='composer'
+alias ci='c install'
+alias cup='c update'
 alias cr='c require'
 alias cdal='c dump-autoload'
 
@@ -26,3 +37,5 @@ alias cdal='c dump-autoload'
 alias lc='php artisan'
 alias lrl='lc route:list'
 alias lmg='lc migrate'
+alias lopt='lc optimize'
+alias lcc='lc clear-compiled'
