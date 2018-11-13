@@ -1,5 +1,5 @@
 ## Unix
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -39,3 +39,9 @@ alias lrl='lc route:list'
 alias lmg='lc migrate'
 alias lopt='lc optimize'
 alias lcc='lc clear-compiled'
+
+##Python
+alias py='python3'
+
+##Django
+alias dj='py manage.py'
