@@ -3,6 +3,9 @@ alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
+## Ubuntu
+alias uuu="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade && sudo apt autoremove -y && sudo apt autoclean -y"
+
 ## Directory Location
 pp="/home/$USER/Projects/php/"
 flp="/home/$USER/Projects/php/fl"
