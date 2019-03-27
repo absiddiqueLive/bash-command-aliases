@@ -1,7 +1,9 @@
+pcdir="`pwd`"
 ## Unix
 alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
+alias afp="find $pcdir -path $pcdir/vendor -prune -o -print0 | sudo xargs -0 chown -R www-data:$USER && find `pwd` -type d -print0 | sudo xargs -0 chmod 0775 && find `pwd` -type f -print0 | sudo xargs -0 chmod 0664"
 
 ## Ubuntu
 alias uuu="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade && sudo apt autoremove -y && sudo apt autoclean -y"
