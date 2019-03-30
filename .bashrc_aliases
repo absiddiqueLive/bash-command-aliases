@@ -1,9 +1,8 @@
-pcdir="`pwd`"
 ## Unix
 alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
-alias afp="find $pcdir -path $pcdir/vendor -prune -o -print0 | sudo xargs -0 chown -R www-data:$USER && find `pwd` -type d -print0 | sudo xargs -0 chmod 0775 && find `pwd` -type f -print0 | sudo xargs -0 chmod 0664"
+alias getpath='echo $(pwd)'
 
 ## Ubuntu
 alias uuu="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade && sudo apt autoremove -y && sudo apt autoclean -y"
@@ -11,6 +10,28 @@ alias uuu="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade && su
 ## Directory Location
 pp="/home/$USER/Projects/php/"
 flp="/home/$USER/Projects/php/fl"
+
+##Apache
+alias afp="go"
+
+function go ()
+{
+    if [ "$(getpath)" =  "$HOME" ]; then
+	echo "You are in: $(getpath), Action terminated !!!"
+	return 0;
+    fi
+
+    echo "Your in: $(getpath), change permision? [Yes/No]:No"
+    read action
+
+    if [ "$action" != "${action#[Yes]}" ]; then
+    	find $(getpath) -print0 | sudo xargs -0 chown -R www-data:$USER
+	find $(getpath) -type d -print0 | sudo xargs -0 chmod 0775
+	find $(getpath) -type f -print0 | sudo xargs -0 chmod 0664
+    else
+	echo "Action terminated !!!"
+    fi
+}
 
 ## Git
 alias gi='git init'
