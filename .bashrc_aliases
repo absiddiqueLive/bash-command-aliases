@@ -73,3 +73,4 @@ alias py='python3'
 
 ##Django
 alias dj='py manage.py'
+alias dja='django-admin'
