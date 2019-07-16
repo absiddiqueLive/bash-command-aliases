@@ -74,3 +74,10 @@ alias py='python3'
 ##Django
 alias dj='py manage.py'
 alias dja='django-admin'
+
+##PHPUnit
+alias punit='phpunit_cmd'
+alias pucon='punit --generate-configuration'
+alias puf='punit --filter '
+alias ut='punit'
+alias utf='puf'
