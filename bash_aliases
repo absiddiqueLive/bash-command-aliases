@@ -1,11 +1,13 @@
-## Unix
+## Unix/Linux
 alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 alias getpath='echo $(pwd)'
+alias nkey="ssh-keygen -t rsa"
 
 ## Ubuntu
-alias uuu="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade && sudo apt autoremove -y && sudo apt autoclean -y"
+alias clean-all="sudo apt autoremove -y && sudo apt autoclean -y"
+alias uuu="sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade && clean-all"
 
 ## Directory Location
 pp="/home/$USER/Projects/php/"
